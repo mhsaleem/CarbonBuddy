@@ -1,1 +1,26 @@
-/* Empty. Add your own CSS if you like */
+/*/!* Empty. Add your own CSS if you like *!/*/
+
+@font-face {
+  font-family: billabong;
+  src: url(Billabong.ttf);
+}
+.login{;
+  background: url("../img/bike3.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.appName{
+  font-family: billabong;
+  color: white;
+  font-size: 500%;
+  text-align: center;
+
+  margin-top: 100px;
+}
+
+.login-fb {
+
+
+
+}
+

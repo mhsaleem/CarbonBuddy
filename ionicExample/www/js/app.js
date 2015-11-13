@@ -40,11 +40,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       controller: 'SignInCtrl'
     })
 
-    .state('forgotpassword', {
-      url: '/forgot-password',
-      templateUrl: 'templates/forgot-password.html'
-    })
-
     .state('tab', {
     url: '/tab',
     abstract: true,
@@ -81,7 +76,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
-
 
 
 

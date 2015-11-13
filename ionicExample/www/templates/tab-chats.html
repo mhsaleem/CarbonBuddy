@@ -3,8 +3,12 @@
     <button class="button button-icon icon ion-ios-minus-outline" ng-click="data.showDelete = !data.showDelete"></button>
   </ion-nav-buttons>
   <ion-content>
+    <label class="item item-input">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="search" placeholder="search" ng-model="searchQuery"/>
+    </label>
     <ion-list show-delete="data.showDelete" >
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats|filter:searchQuery" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
 
         <img ng-src="{{chat.face}}">
         <h2>{{chat.name}}</h2>
