@@ -1,0 +1,31 @@
+<ion-view view-title="{{route.name}}">
+  <ion-content class="padding">
+    <div class="card">
+      <div class="item item-divider item-icon-right">
+        Route Information
+      </div>
+      <div class="item item-text-wrap">
+        <h2>Start:</h2> {{route.start}}
+      </div>
+      <div class="item item-text-wrap">
+        <h2>Destination:</h2> {{route.end}}
+      </div>
+    </div>
+    <div class="card ios-ionic-outline">
+      <div class="item item-divider">
+        Buddies
+      </div>
+      <ion-list>
+        <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="buddy in route.buddies" type="item-text-wrap">
+
+          <img ng-src="{{buddy.face}}">
+          <h2>{{buddy.name}}</h2>
+        </ion-item>
+      </ion-list>
+    </div>
+    <button class="button button-block button-balanced">
+      Start Route
+      </button>
+
+  </ion-content>
+</ion-view>

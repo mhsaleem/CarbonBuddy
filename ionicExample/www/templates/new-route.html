@@ -1,0 +1,38 @@
+<ion-view view-title="New Route">
+  <ion-content>
+    <div class="list">
+      <div class="item item-divider">
+        Route Information
+      </div>
+      <label class="item item-input">
+        Name:&nbsp
+        <input type="text" ng-model="currentRoute.name">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Enter Starting Point" ng-model="currentRoute.start">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Enter Destination" ng-model="currentRoute.end">
+      </label>
+      <div class="item item-divider">
+        Add Buddies
+      </div>
+      <div>
+          <ion-list>
+            <ion-checkbox class="item-checkbox-right"ng-repeat="buddy in buddies" ng-model="buddy.checked" ng-checked="buddy.checked">
+              {{buddy.name}}
+            </ion-checkbox>
+          </ion-list>
+      </div>
+    </div>
+
+    <div class="padding addRoute">
+      <button class="button button-block button-balanced" ng-click="addNewRoute(currentRoute,buddies)">
+        Add Route
+      </button>
+      <!--<a href="#/tab/account" class="button button-block button-balanced" ng-click="addNewRoute(currentRoute)">Add Route</a>-->
+    </div>
+  </ion-content>
+</ion-view>
+
+

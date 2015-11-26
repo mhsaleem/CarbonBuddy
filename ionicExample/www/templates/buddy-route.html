@@ -1,0 +1,18 @@
+<ion-view view-title="Add to Route">
+  <ion-content>
+    <div class="item item-divider">
+      Select Route to Add Buddy
+    </div>
+    <div>
+      <ion-list>
+        <button>
+          <ion-item class="item-remove-animate" ng-repeat="route in routes" type="item-text-wrap">
+            <h2>{{route.name}}</h2>
+            <p>{{route.start}} to {{route.end}}</p>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+          </ion-item>
+        </button>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>

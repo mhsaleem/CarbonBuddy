@@ -72,6 +72,10 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
   }
 
+  .addRoute{
+    margin-bottom: 30%;
+  }
+
 }
 
 /* Portrait */
@@ -117,5 +121,46 @@ and (min-device-width: 414px)
 and (max-device-width: 736px)
 and (-webkit-min-device-pixel-ratio: 3)
 and (orientation: landscape) {
+
+}
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen
+and (min-device-width: 1200px)
+and (max-device-width: 1600px)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+  .appName{
+    margin-top: 5%;
+  }
+
+  .fb-login-btn-container {
+
+    display: block;
+    padding: 0px 10px;
+    margin-top: 40%;
+    positon: fixed;
+
+  }
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen
+and (min-device-width: 1200px)
+and (max-device-width: 1600px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (min-resolution: 192dpi) {
+
+  .appName{
+    margin-top: 5%;
+  }
+
+  .fb-login-btn-container {
+
+    display: block;
+    padding: 0px 10px;
+    margin-top: 40%;
+    position:fixed;
+  }
 
 }

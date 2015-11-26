@@ -1,9 +1,20 @@
 <ion-view view-title="Routes">
+  <ion-nav-buttons side="primary">
+    <button class="button button-icon icon ion-ios-minus-outline" ng-click="data.showDelete = !data.showDelete"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <a href="#/tab/new-route" class="button">New Route</a>
+   </ion-nav-buttons>
   <ion-content>
-    <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
-    </ion-list>
+    <div>
+      <ion-list show-delete="data.showDelete" >
+        <ion-item class="item-remove-animate" ng-repeat="route in routes" type="item-text-wrap" href="#/tab/account/{{route.id}}">
+          <h2>{{route.name}}</h2>
+          <p>{{route.start}} to {{route.end}}</p>
+          <i class="icon ion-chevron-right icon-accessory"></i>
+          <ion-delete-button class="ion-minus-circled" ng-click="remove(route)"></ion-delete-button>
+        </ion-item>
+      </ion-list>
+    </div>
   </ion-content>
 </ion-view>
